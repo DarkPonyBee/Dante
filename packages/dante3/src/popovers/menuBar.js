@@ -117,7 +117,7 @@ export default function MenuBar({ editor, fixed }) {
   }
 
   function fixedStyles() {
-    if (!fixed) return { width: `${11 * 43}px` };
+    if (!fixed) return { width: `${8 * 43}px` };
     if (fixed) return { position: `sticky`, top: "0" };
   }
 
@@ -131,7 +131,7 @@ export default function MenuBar({ editor, fixed }) {
         className={`dante-menu ${displayLinkMode()}`}
         style={fixedStyles()}
       >
-        <div className="dante-menu-linkinput" style={{ width: `${11 * 43}px` }}>
+        <div className="dante-menu-linkinput" style={{ width: `${8 * 43}px` }}>
           <input
             className="dante-menu-input"
             placeholder={"put your souce here"}
@@ -157,7 +157,7 @@ export default function MenuBar({ editor, fixed }) {
             <span className={"dante-icon"}>{italic()}</span>
           </li>
 
-          <DanteTooltipColor
+          {/* <DanteTooltipColor
             styles={{}}
             editor={editor}
             enableLinkMode={_enableLinkMode}
@@ -165,7 +165,7 @@ export default function MenuBar({ editor, fixed }) {
             style_type="color"
             handleClick={_clickBlockInlineStyle}
             show={show}
-          />
+          /> */}
 
           <DanteTooltipLink
             selected={editor.isActive("link")}
@@ -188,14 +188,14 @@ export default function MenuBar({ editor, fixed }) {
           >
             <span className={"dante-icon"}>{h2()}</span>
           </li>
-          <li
+          {/* <li
             onClick={() =>
               editor.chain().focus().toggleHeading({ level: 3 }).run()
             }
             className={itemClass("heading", { level: 3 })}
           >
             <span className={"dante-icon"}>{h3()}</span>
-          </li>
+          </li> */}
           <li
             onClick={() => editor.chain().focus().toggleBulletList().run()}
             className={itemClass("bulletList")}
@@ -208,12 +208,12 @@ export default function MenuBar({ editor, fixed }) {
           >
             <span className={"dante-icon"}>{insertorderedlist()}</span>
           </li>
-          <li
+          {/* <li
             onClick={() => editor.chain().focus().toggleCodeBlock().run()}
             className={itemClass("codeBlock")}
           >
             <span className={"dante-icon"}>{code()}</span>
-          </li>
+          </li> */}
           <li
             onClick={() => editor.chain().focus().toggleBlockquote().run()}
             className={itemClass("blockquote")}

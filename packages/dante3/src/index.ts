@@ -10,6 +10,8 @@ import Styled from "./styled";
 
 import ImageBlock, { ImageBlockConfig } from "./blocks/image";
 
+import ImageFreeBlock, {ImageFreeBlockConfig} from './blocks/imageFree';
+
 import EmbedBlock, { EmbedBlockConfig } from "./blocks/embed";
 
 import VideoBlock, { VideoBlockConfig } from "./blocks/video";
@@ -46,6 +48,8 @@ export { darkTheme, defaultTheme };
 export { Icons };
 export { Styled };
 export { ImageBlock, ImageBlockConfig };
+export { ImageFreeBlock, ImageFreeBlockConfig };
+
 export { EmbedBlock, EmbedBlockConfig };
 export { VideoBlock, VideoBlockConfig };
 export { PlaceholderBlock, PlaceholderBlockConfig };
@@ -62,14 +66,15 @@ export { CodeBlock, CodeBlockConfig };
 
 const defaultPlugins = [
   ImageBlockConfig(),
+  ImageFreeBlockConfig(),
+  VideoBlockConfig(),
   CodeBlockConfig(),
   DividerBlockConfig(),
   PlaceholderBlockConfig(),
   EmbedBlockConfig(),
-  VideoBlockConfig(),
-  GiphyBlockConfig(),
-  VideoRecorderBlockConfig(),
-  SpeechToTextBlockConfig(),
+  // GiphyBlockConfig(),
+  // VideoRecorderBlockConfig(),
+  // SpeechToTextBlockConfig(),
 ];
 
 export { defaultPlugins };

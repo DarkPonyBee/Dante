@@ -155,7 +155,8 @@ export const EmbedBlockConfig = (options = {}) => {
       insert_block: "embed",
     },
     options: {
-      endpoint: "//noembed.com/embed?url=",
+      // endpoint: "//noembed.com/embed?url=",
+      endpoint: "//iframe.ly/api/oembed?api_key=704763f7594374d11ffba0&url=",
       placeholder:
         "Paste a link to embed content from another site (e.g. Twitter) and press Enter",
     },
